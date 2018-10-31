@@ -1,6 +1,6 @@
 permalink: /:year:month:day/:title
 url: maz02.github.io
-baseurl: /wind
+baseurl:
 
 # variables
 name: Your Site Name
