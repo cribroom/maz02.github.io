@@ -3,4 +3,25 @@ layout: me
 title: me
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis placerat enim nec cursus. Ut et elit congue, facilisis dui id, efficitur velit. Integer faucibus velit varius arcu consectetur aliquam. Sed dui ante, euismod non malesuada vel, suscipit vel elit. Nullam tempor vehicula urna, sed dignissim ligula hendrerit in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et nisi eget nunc vehicula posuere. Nam elementum finibus auctor. Suspendisse a mauris et arcu molestie egestas sed et dolor. Nullam ut est tristique, iaculis tortor non, viverra felis. Praesent a tincidunt tellus, eget congue eros. Mauris non libero nec ipsum ultricies tincidunt sit amet nec ante. Duis molestie sem at ligula rhoncus viverra. Pellentesque sit amet tortor euismod, rhoncus lacus a, sodales odio. Proin ac convallis ipsum. Cras tincidunt mollis consequat.
+안녕 
+여긴 내 잡동사니 상자야
+
+18살이야 만 16살이지만
+좀 더 정확히는  2018-10-31 기준 16.7살이야
+
+보안이 좋아
+워게임은 사실 웹 문제를 제일 많이 풀었어
+그치만 시스템도 좋아해. 보통은 대회에서 웹 문제는 주지도 않으니까도 그렇고
+근데 실제로 써먹거나 주변에서 취약점을 찾거나 하는 데 있어서는 웹이 훨씬 가까이 있지 않아?
+재밌다는 뜻이야
+
+PS를 잘 하고 싶어서 알고리즘 공부도 했어
+주 언어는 python인데, 요즘은 cpp도 써보고 있어. 초보지만.
+c를 쓰는 건 아마 이모지 코딩할 때 정도
+그리고 시간제한이 빠듯한 문제를 빨리 풀기 위해서?
+
+어렸을 때 입문은 전부 c로 했지만 아무래도 갈수록 python만 쓰게 되더라
+웹해킹할 땐 자동으로 입력값이나 패킷같은 거 보내든가 할 때
+시스템해킹에서는 서버에 파이썬 깔려있으면 그거 쓸 때도 있고
+요즘 Tensorflow에 관심이 생겨서 또 Python이랑 anaconda의 나날을 보내는 중이야
+완전 쌩초보지만
