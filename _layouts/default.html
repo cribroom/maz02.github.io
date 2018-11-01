@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="theme-color" content="#008083">
+	<meta name="theme-color" content="#008082">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	
@@ -52,7 +52,7 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				{% if page.title == 'me' or page.title == '404...' %}
+				{% if page.title == 'me' or page.title == '404 ERROR' %}
 					<ul>
 						{% for post in site.posts %}
 						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
