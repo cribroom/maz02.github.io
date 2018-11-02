@@ -4,17 +4,7 @@ body {
 	font-size: 13px;
 }
 
-::selection { 
-    background:#e99; 
-    color: #FFF; }
-::-moz-selection { 
-    background:#e99; 
-    color: #FFF; 
-} 
-::-webkit-selection { 
-    background:#e99; 
-    color: #FFF; 
-}
+
 
 .wrapper, .content {
 	width: 800px;
