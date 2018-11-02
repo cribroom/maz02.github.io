@@ -4,6 +4,15 @@ body {
 	font-size: 13px;
 }
 
+::-moz-selection {
+   background: #e99;
+   color: #fff;
+}
+::selection {
+   background: #e99;
+   color: #fff;
+}
+
 .wrapper, .content {
 	width: 800px;
 	margin: auto;
