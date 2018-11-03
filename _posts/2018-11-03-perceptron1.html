@@ -6,17 +6,20 @@ tags: 러닝머신
 <pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
 뉴런의 기초! 퍼셉트론을 만들어봐요.
 먼저 단층 퍼셉트론은 이렇게 만들어요.
-w는 weight 즉 가중치이고, theta는 임계각이예요. 식에서 보다시피 뉴런의 역치 역할을 하죠.
+w는 weight 즉 가중치이고, theta는 임계각이예요.
 
 y=
   0 (w1x1+w2x2 <= θ)
   1 (w1x1+w2x2 > θ)
 
+그리고 그림으로 그리면 이렇게 생겼어요. </pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/perc1.png">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
 python으로 하나 구현해볼까요?
-가중치와 임계각은 임의로 정했어요.
+y가 활성화되면 1, 아니면 0이예요.
 
-def AND(x1, x2):
-  w1, w2, θ = 0.5, 0.5, 0.7
+def Y(x1, x2):
+  w1, w2, θ = 0.5, 0.5, 0.7 #임의로 정했어요
   func = x1*w1 + x2*w2
   if func <= θ:
     return 0
