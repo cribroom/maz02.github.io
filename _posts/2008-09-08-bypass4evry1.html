@@ -3,7 +3,9 @@ layout: default
 title: "복사금지_해제"
 tags: tips4evry1
 ---
-
+<p oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+<script language=JavaScript>
+	function click() {if ((event.button==2) || (event.button==2)) {alert('복사하면 안 돼요');}}document.onmousedown=click// --></script>
 2018-10-31<br><br>
 
 <오늘의 상식 1> 복사금지 해제 편 <br><br>
@@ -18,4 +20,7 @@ Debugger: Disable JavaScript 항목이 있을 거예요.<br><br>
 
 여기 체크한 상태로, 개발자 도구를 닫지 않고<br>
 그대로 원 글에 커서를 갖다대보면 <br>
-복사할 수 있어요.<br>
+복사할 수 있어요.<br><br>
+
+이 페이지에 복사금지 스크립트가 적용되어있으니 연습해봐요.
+</p>
