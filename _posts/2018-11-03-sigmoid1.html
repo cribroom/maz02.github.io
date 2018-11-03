@@ -1,0 +1,39 @@
+---
+layout: default
+title: "sigmoid 1"
+tags: 러닝머신
+---
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+
+y=
+  0 (b+w1x1+w2x2 <= θ)
+  1 (b+w1x1+w2x2 > θ)
+  
+이 퍼셉트론을 조금 더 자세히 나누면..
+
+y = h(b+w1x1+w2x2)
+h(x) = 
+    0 (x<=0)
+    1 (x>0)
+    
+이렇게 돼요. 
+같은 식이지만 나눠져있어요.
+여기서 h(x) 부분을 '활성화 함수'라고 부릅니다.
+y = h(x) 꼴에서 h(x)의 형태에 따라 뉴런이 뱉는 결과값이 달라지겠죠.
+
+위 식에서는 h(x)가 0과 1로만 나눠지고,
+h(x)의 그래프는 이렇게 그려져요.</pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/hx.png?raw=true">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+이건 계단 함수 (Step function)이라고 불러요.
+
+그렇지만 현실의 데이터는 True와 False로만 나눠지지 않아요.
+더 고차원적인 작업을 하려면 0과 1 사이의 값을 다룰 수 있는 활성화 함수가 필요해요.
+그래서 h(x) 자리에 들어가는 함수 중, 2000년대에 가장 이름을 날린 함수는 'sigmoid'예요.
+수식은 y = 1/1+e^-x 입니다. 참고로 경사하강법을 이용할 때 편미분하면 y(1-y)로 바뀌어요. </pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/sig.png?raw=true">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+그렇지만 sigmoid를 마구 쓰면 치명적인 문제가 생겨요. 
+10년이 넘게 해결되지 않으면서 머신러닝 연구자들의 희망을 꺼트리던 vanishing gradient예요.
+
+그게 뭐냐면.. 경사하강법과 같이 다음에 써야겠어요!
