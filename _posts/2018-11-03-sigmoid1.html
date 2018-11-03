@@ -30,13 +30,27 @@ h(x)의 그래프는 이렇게 그려져요.</pre>
 그렇지만 현실의 데이터는 True와 False로만 나눠지지 않아요.
 더 고차원적인 작업을 하려면 0과 1 사이의 값을 다룰 수 있는 활성화 함수가 필요해요.
 그래서 h(x) 자리에 들어가는 함수 중, 2000년대에 가장 이름을 날린 함수는 'sigmoid'예요.
-수식은 y = 1/1+e^-x 입니다. 참고로 경사하강법을 이용할 때 미분하면 y(1-y)로 바뀌어요. 
+수식은 y = 1/1+e^-x 입니다. 
 
-Sigmoid Function: y = 1/1+e^-x</pre>
+Sigmoid Activation Function: y = 1/1+e^-x</pre>
 <img src="https://github.com/maz02/maz02.github.io/blob/master/pics/sig.png?raw=true">
 <pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
 
-그렇지만 sigmoid를 마구 쓰면 치명적인 문제가 생겨요. 
-10년이 넘게 해결되지 않으면서 머신러닝 연구자들의 희망을 꺼트리던 vanishing gradient예요.
+경사하강법 등을 쓰면서 이 친구를 미분할 거예요. 
+물론 텐서플로우가 알아서 해줘요.
+그래도 한 번쯤은 직접 미분해보면..
+f(x) = 1/1+e^-x
+f'(x) = e^-x/(1+e^-x)^2
+    = f(x)(e^-x/(1+e^-x))
+    = f(x)((1+e^-x-1)/(1+e^-x))
+    = f(x)(1-f(x))
+
+쨘! 간단한 모양의 y(1-y)로 바뀌어요.
+
+식에서 보이듯 sigmoid의 결과값은 0과 1 사이에서 움직여요. 그렇기 때문에 결과값을 확률과 동치시켜 쓸 수 있고, 어디서나 연속에 미분 가능하기 때문에 이런저런 계산하기도 아주 용이해요. 
+이런 건 sigmoid가 아주 매력적이죠. ReLu를 예로 들자면 -1에서 1까지의 값을 가지면서 x=0에서 미분 불가능하잖아요. 누가 그런 함수를 쓰고 싶겠어요. 20년 전이면 나같아도 sigmoid 빠가 됐겠다.
+
+그렇지만... sigmoid를 마구 쓰면 치명적인 문제가 생겨요. 
+바로 10년이 넘게 해결되지 않으면서 머신러닝 연구자들의 희망을 꺼트리던 vanishing gradient예요.
 
 그게 뭐냐면.. 경사하강법과 같이 다음에 써야겠어요!
