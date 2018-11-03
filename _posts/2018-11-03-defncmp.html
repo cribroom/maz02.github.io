@@ -7,12 +7,12 @@ tags: 러닝머신
 <strong>feature</strong> than variable <br>
 <strong>edge</strong> equal input
 <br><br>
-Definition of <strong>Machine Learning by Tom Mitchell:</strong> <br>
-A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.
-<br><br>
-Formal Definition of <strong>Deep Learning:</strong> <br>
-Deep learning is a particular kind of machine learning that achieves great power and flexibility by learning to represent the world as nested hierarchy of concepts, with each concept defined in relation to simpler concepts, and more abstract representations computed in terms of less abstract ones.
-<br><br><br><br>
+Definition of <strong>Machine Learning</strong> by Tom Mitchell: <br>
+<blockquote>A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E.
+</blockquote><br><br>
+Formal Definition of <strong>Deep Learning</strong>:<br>
+<blockquote>Deep learning is a particular kind of machine learning that achieves great power and flexibility by learning to represent the world as nested hierarchy of concepts, with each concept defined in relation to simpler concepts, and more abstract representations computed in terms of less abstract ones.
+</blockquote><br><br><br><br>
 <b>cmp machine,deep</b>
 <br><br>
 1. Data Dependencies<br>
@@ -29,12 +29,12 @@ Deep learning is a particular kind of machine learning that achieves great power
 예를 들어, Convolutional Neural Network에서 초기 레이어는 Raw data의 low level features를 학습하고 이를 토대로 다음 레이어에서 high level features를 학습한다.
 </blockquote><br><br>
 4. Problem Solving Approach <br>
-  전통적인 머신러닝 알고리즘의 문제 접근법은 단계별로 이루어지나 딥러닝 알고리즘은 end-to-end 방식으로 문제를 해결한다. 
+<blockquote>전통적인 머신러닝 알고리즘의 문제 접근법은 단계별로 이루어지나 딥러닝 알고리즘은 end-to-end 방식으로 문제를 해결한다. 
 예로, grabcut과 같은 경계 탐지 알고리즘(bound box detection algorithm)은 먼저 가능한 객체를 탐색한 후에 이를 HOG가 있는 SVM (Support Vector Machine) 등의 객체 인식 알고리즘을 사용해 객체를 인식하는 반면 YOLO net은 객체의 이름과 위치를 한 번에 계산해낸다.
-<br><br>
+</blockquote><br><br>
 5. Execution Time <br>
-  딥러닝은 train 시간이 오래 걸린다. Resnet의 경우 평균적으로 2주가 소요된다. 하지만 test의 경우, 보통 딥러닝에서 훨씬 빠르게 이루어진다. 다만 머신러닝의 test 속도는 알고리즘마다 편차가 크다. 가령 k-nearest neighbors의 경우 데이터 크기가 커질수록 테스트 시간이 길어진다.
-<br><br>
+<blockquote>딥러닝은 train 시간이 오래 걸린다. Resnet의 경우 평균적으로 2주가 소요된다. 하지만 test의 경우, 보통 딥러닝에서 훨씬 빠르게 이루어진다. 다만 머신러닝의 test 속도는 알고리즘마다 편차가 크다. 가령 k-nearest neighbors의 경우 데이터 크기가 커질수록 테스트 시간이 길어진다.
+</blockquote><br><br>
 6. Interpretability <br>
-  의사결정나무(Decision tree learning), 선형회귀모형, Logistic regression 등의 경우 명확한 rule이 제공되기에 해석이 필요한 산업에서 이용할 수 있으나, 딥러닝 알고리즘에서는 이와 같은 활용이 어렵다.
-<br><br>
+<blockquote>의사결정나무(Decision tree learning), 선형회귀모형, Logistic regression 등의 경우 명확한 rule이 제공되기에 해석이 필요한 산업에서 이용할 수 있으나, 딥러닝 알고리즘에서는 이와 같은 활용이 어렵다.
+</blockquote><br><br>
