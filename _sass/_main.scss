@@ -306,6 +306,20 @@ ul.topbar {
 		word-break: break-word;
 	}
 }
+
+::selection {
+    background:#e99;
+    color: #fff;
+}
+::-moz-selection {
+    background:#e99;
+    color: #fff;
+}
+::-webkit-selection {
+    background:#e99;
+    color: #fff;
+}
+
 @media only screen and (max-width: 900px) {
     .content {
         width: 90%;
