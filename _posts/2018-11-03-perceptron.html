@@ -1,0 +1,79 @@
+---
+layout: default
+title: "basic perceptron"
+tags: 러닝머신
+---
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+뉴런의 기초! 퍼셉트론을 만들어봐요.
+
+먼저 단층 퍼셉트론은 이렇게 만들어요.
+w는 weight 즉 가중치이고, theta는 임계각이예요.
+
+y=
+  0 (w1x1+w2x2 <= θ)
+  1 (w1x1+w2x2 > θ)
+
+그리고 그림으로 그리면 이렇게 생겼어요. </pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/perc1.png?raw=true">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+python으로 하나 구현해볼까요?
+
+def Y(x1, x2):
+  w1, w2, θ = 0.5, 0.5, 0.7 #임의로 정했어요
+  func = x1*w1 + x2*w2
+  if func <= θ:
+    return 0
+  if func > θ:
+    return 1
+    
+    
+그리고, 위의 단층 퍼셉트론 식을 조금 바꿔봐요
+
+y=
+  0 (b+w1x1+w2x2 <= θ)
+  1 (b+w1x1+w2x2 > θ)
+  
+이게 official이예요. 
+b는 아까의 theta이고, 여기선 bias(편향)이라고 한답니다.
+
+편향과 가중치는 구분해서 쓰도록 합시다. 편향은 뉴런 활성화 난이도를 직접 조절하는 매개변수이고, 가중치는 입력신호가 결과에 주는 영향력을 조절하는 것이니까요.
+
+
+위 y의 식을 잘 바꾸면 퍼셉트론 하나만으로 AND, OR, NAND 게이트를 만들 수 있어요.
+그렇지만 XOR 게이트는 만들 수 없어요. :(
+
+이유는 진리표를 토대로 그래프를 그리면 쉽게 알 수 있어요.
+(x1, x2)일 때
+AND는 (1,1)일 때만 1이고 이외에는 0이예요.
+OR은 (0,0)일 때만 0이고, 이외에는 1이예요.
+NAND는 (1,1)일 때만 0이고, 이외에는 1이예요.
+
+x축을 x1, y축을 x2로 두고, (x1,x2)를 AND에 통과시킨 경우의 수 4개로 그린 그래프예요.</pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/perc2.png?raw=true">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+구분선이 선형으로 나타나요. 수식으로도 y 하나로 표현할 수 있고, 퍼셉트론도 1개만 있으면 돼요.
+OR과 NAND도 그래프를 직접 그려보면 TRUE일 때와 FALSE일 때를 직선 하나로 구분지을 수 있어요.
+
+그렇지만 XOR은 아니예요.</pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/perc3.png?raw=true">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+직선 한 개로 표현되지 못하면 '비선형'이라고 해요.
+누가 봐도 선형은 아니죠.
+
+그렇다면 XOR은 어떻게 그릴까요?
+이럴 때는 퍼셉트론이 1개 이상 필요해요.
+XOR은 NAND와 OR을 합치면 만들 수 있어요.
+이런 식으로요.
+
+def XOR(x1,x2):
+  s1=NAND(x1,x2)
+  s2=OR(x1,x2)
+  y=AND(s1,s2)
+  return y
+  
+그림으로 그리면 이렇게 될 거예요.</pre>
+<img src="https://github.com/maz02/maz02.github.io/blob/master/pics/xor.png?raw=true">
+<pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
+이렇게, 비선형 문제를 해결할 때는 '다층 퍼셉트론'을 쓰면 돼요.
+
+</pre>
