@@ -6,13 +6,14 @@ tags: 러닝머신
 <pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-break:break-all;">
 뉴런의 기초! 퍼셉트론을 만들어봐요.
 먼저 단층 퍼셉트론은 이렇게 만들어요.
+w는 weight 즉 가중치이고, theta는 임계각이예요. 역치의 역할을 하죠.
 
 y=
   0 (w1x1+w2x2 <= θ)
   1 (w1x1+w2x2 > θ)
 
-w는 weight 즉 가중치이고, theta는 임계각이예요.
-.py로는 이렇게 구현해요.
+이걸로 AND gate를 구현해볼까요?
+가중치와 임계각은 임의로 정했어요.
 
 def AND(x1, x2):
   w1, w2, θ = 0.5, 0.5, 0.7
@@ -22,7 +23,7 @@ def AND(x1, x2):
   if func > θ:
     return 1
     
-위의 단층 퍼셉트론 식을 조금 바꿔보면
+그리고, 위의 단층 퍼셉트론 식을 조금 바꿔봅시다
 
 y=
   0 (b+w1x1+w2x2 <= θ)
