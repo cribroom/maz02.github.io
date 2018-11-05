@@ -23,3 +23,44 @@ tags: journal
 <td>7</td> <td>생과I</td> <td>창체B</td> <td>독서</td> <td>영어II</td> <td>*</td> 
 </tr><tr>
 </tr> </table>
+
+
+
+<p>컴시간에서 실시간으로 데이터 가지고 오기 //작업중 </p>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+function download_get() {
+	var str_url = $('#input_url').val();
+  var jqxhr = $.get(str_url, function(data) {
+		$('#textvw').val(data);
+	});
+}
+
+function download_post() {
+	var str_url = $('#input_url').val();
+	var jqxhr = $.post(str_url, function(data) {
+    $('#textvw').val(data);
+  });
+}
+
+
+$(document).ready(function() {
+	$('button').click(function() {
+		switch($('button').index(this)) {
+		case 0:
+			download_get();
+			break;
+		case 1:
+			download_post();
+			break;
+		}
+	});
+});
+
+</script>
+
+<input id='input_url' value='http://comci.kr:4081/st'>
+<button>dl get</button>
+<button>dl post</button><br><br>
+<textarea id='textvw' rows="" cols="" style='height:200px; width:320px;'></textarea>
