@@ -24,43 +24,9 @@ tags: journal
 </tr><tr>
 </tr> </table>
 
+<br><br><br>
 
+<p>컴시간에서 데이터를 실시간으로 가지고 오고 싶은데, github는 static만 지원하기 때문에 php나 json 이나 하여간 뭘 쓸 수가 없고 js로만 구현해야 할 것 같다. 그런데 컴시간에서 간단하게 데이터 파싱 못하게 좀 꼬아놔서.. 오늘은 못 하고 잘 듯.</p>
 
-<p>컴시간에서 실시간으로 데이터 가지고 오기 //작업중 </p>
+<table style="width:340px; margin:3px 0px;"><tbody><tr><td class="내용2" style="border:0px; text-align:left;"><input type="button" onclick="ba_NextDisp(-1);" value="◀"></td><td style="border:0px;" colspan="5" class="내용2">제 2 학년 13 반 시간표 </td><td class="내용2" style="border:0px; text-align:right;"><input type="button" onclick="ba_NextDisp(1);" value="▶"></td></tr><tr><td class="교시">교시</td><td class="제목">월(5)</td><td class="제목">화(6)</td><td class="제목">수(7)</td><td class="제목">목(8)</td><td class="제목">금(9)</td><td class="제목">토(10)</td></tr><tr><td class="교시">1(09:00)</td><td class="내용">한국사<br></td><td class="내용">일어Ⅰ<br></td><td class="내용">미적Ⅱ<br></td><td class="내용">독서<br></td><td class="내용">영어Ⅱ<br></td><td class="내용"></td></tr><tr><td class="교시">2(10:00)</td><td class="내용">영어Ⅱ<br></td><td class="내용">한국사<br></td><td class="내용">스문<br></td><td class="내용">일어Ⅰ<br></td><td class="변경">영어Ⅱ<br></td><td class="내용"></td></tr><tr><td class="교시">3(11:00)</td><td class="내용">물리Ⅰ<br></td><td class="내용">미적Ⅱ<br></td><td class="내용">확통<br></td><td class="내용">물리Ⅰ<br></td><td class="내용">화학Ⅰ<br></td><td class="내용"></td></tr><tr><td class="교시">4(12:00)</td><td class="내용">확통<br></td><td class="내용">독서<br></td><td class="내용">물리Ⅰ<br></td><td class="내용">미적Ⅱ<br></td><td class="내용">생과Ⅰ<br></td><td class="내용"></td></tr><tr><td class="교시">5(13:40)</td><td class="내용">미적Ⅱ<br></td><td class="내용">영어Ⅱ<br></td><td class="내용">생과Ⅰ<br></td><td class="내용">한국사<br></td><td class="내용">창체</td><td class="내용"></td></tr><tr><td class="교시">6(14:40)</td><td class="내용">독서<br></td><td class="내용">화학Ⅰ<br></td><td class="내용">화학Ⅰ<br></td><td class="내용">스문<br></td><td class="내용">창체</td><td class="내용"></td></tr><tr><td class="교시">7(15:40)</td><td class="변경">한국사<br></td><td class="내용">창체B<br></td><td class="내용">독서<br></td><td class="내용">영어Ⅱ<br></td><td class="내용"></td><td class="내용"></td></tr><tr><td class="교시">8(16:40)</td><td class="내용"></td><td class="내용"></td><td class="내용"></td><td class="내용"></td><td class="내용"></td><td class="내용"></td></tr></tbody></table>
 
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-function download_get() {
-	var str_url = $('#input_url').val();
-  var jqxhr = $.get(str_url, function(data) {
-		$('#textvw').val(data);
-	});
-}
-
-function download_post() {
-	var str_url = $('#input_url').val();
-	var jqxhr = $.post(str_url, function(data) {
-    $('#textvw').val(data);
-  });
-}
-
-
-$(document).ready(function() {
-	$('button').click(function() {
-		switch($('button').index(this)) {
-		case 0:
-			download_get();
-			break;
-		case 1:
-			download_post();
-			break;
-		}
-	});
-});
-
-</script>
-
-<input id='input_url' value='http://comci.kr:4081/st'>
-<button>dl get</button>
-<button>dl post</button><br><br>
-<textarea id='textvw' rows="" cols="" style='height:200px; width:320px;'></textarea>
